@@ -18,6 +18,7 @@ wire             a_pls_tgle_in;
 wire             b_pls;
 reg              b_pls_tgle_out_synca; 
 reg              b_pls_tgle_out_syncb; 
+reg              b_pls_tgle_out_sync;
 
 //------------------------------------------------
 //  MUX Load Logic TX Domain
@@ -66,7 +67,7 @@ reg              b_pls_tgle_out_syncb;
       else
         begin
 	  b_pls_tgle_out_synca <= a_pls_tgle_out;
-          b_pls_tgle_out_syncb <= a_pls_tgle_out_synca;
+          b_pls_tgle_out_syncb <= b_pls_tgle_out_synca;
 	end
     end
 
